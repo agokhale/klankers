@@ -1,0 +1,15 @@
+# FreeBSD Kernel Module Build Artifacts
+*.ko
+*.o
+*.d
+*.kld
+.depend*
+@
+machine
+x86
+
+# Test binaries
+test/test_klankers
+test/*.o
+test/*.d
+test/.depend*
