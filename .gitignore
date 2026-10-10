@@ -7,9 +7,16 @@
 @
 machine
 x86
+i386
+export_syms
+opt_*.h
+device_if.h
+bus_if.h
 
-# Test binaries
+# Test binaries and debug symbols
 test/test_klankers
 test/*.o
 test/*.d
+test/*.full
+test/*.debug
 test/.depend*
