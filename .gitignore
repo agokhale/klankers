@@ -13,6 +13,12 @@ opt_*.h
 device_if.h
 bus_if.h
 
+# Homa Binaries
+homa_targetd
+homa_client
+test_homa
+*.img
+
 # Test binaries and debug symbols
 test/test_klankers
 test/*.o

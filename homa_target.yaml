@@ -1,0 +1,31 @@
+# Homa Protocol Storage Target Configuration
+# Installed at /usr/local/etc/homa_target.yaml
+
+server:
+  listen_address: "127.0.0.1"
+  port: 9999
+  worker_threads: 4
+
+homa:
+  unscheduled_bytes: 16384
+  max_grant_window: 65536
+  grant_increment: 8192
+  resend_interval_ms: 100
+
+storage:
+  targets:
+    - name: "zvol0"
+      path: "/dev/zvol/zroot/storage0"
+      read_only: false
+      sync_mode: "sync"
+      block_size: 4096
+      fallback_path: "./zvol0.img"
+      fallback_size_mb: 64
+
+    - name: "zvol_fast"
+      path: "/dev/zvol/zroot/fast0"
+      read_only: false
+      sync_mode: "async"
+      block_size: 4096
+      fallback_path: "./zvol_fast.img"
+      fallback_size_mb: 32
